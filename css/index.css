@@ -1,0 +1,127 @@
+.glass {
+    position: relative;
+    width: 20px;
+    height: 20px; 
+    box-sizing: border-box;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.glass:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    width: 13px;
+    height: 2.7px;
+    background-color: black;  
+    border-radius: 0 7.5px 7.5px 0; 
+    transform-origin: 0 50%;
+    transform: translateX(100%) rotate(45deg);
+}
+
+.header h2 {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.block1, .block2{
+     margin-top: 50px;
+     display: flex;
+     justify-content: center;
+     margin-bottom: 70px;
+    }
+
+.cinema1, .cinema2, .cinema3, .cinema4, .cinema5, .cinema6 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+     
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+body {
+    background: white;
+    background: linear-gradient(to bottom, white, rgba(0, 0, 0));
+    width: 100%;
+    margin: 0 auto;
+}
+
+body header {
+    background-color: linear-gradient(to bottom, black, white);
+    width: 100%;
+    margin: 0 auto;
+}
+
+p, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.block2 p, .block2 h4 {
+    color: #a0a0a0;
+}
+
+img {
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+img:hover, h4:hover {
+    transform: scale(1.04);
+}
+
+.rating {
+    background: black;
+    width: 43px;
+    position: relative;
+    top: -410px;
+    color: white;
+    left: -10px;
+}
+
+h4 {
+    margin-top: -40px;
+    transition: 0.5s;
+}
+
+.header h2:hover {
+    color: red;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .block1, .block2 {
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    } h4 {
+        margin-top: -50px;
+    } p {
+        margin-bottom: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block1, .block2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    } h4 {
+        margin-top: -50px;
+    } p {
+        margin-bottom: 65px;
+    }
+}
